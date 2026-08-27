@@ -16,14 +16,20 @@ renderer.setClearColor(0x000022);
 document.body.appendChild(renderer.domElement);
 
 // Rocket Body
+const bodyGeometry = new THREE.CylinderGeometry(1, 1, 2, 10);
+const bodyMaterial = new THREE.MeshBasicMaterial({
+    color: 0x00ffff
+});
 
+const body = new THREE.Mesh(bodyGeometry, bodyMaterial);
+scene.add(body);
 
 
 
 // Nose Cone
 const noseGeometry = new THREE.ConeGeometry(1, 1, 5);
 const noseMaterial = new THREE.MeshBasicMaterial({
-    color: 800080
+    color: 0x000080
 });
 const nose = new THREE.Mesh(noseGeometry, noseMaterial);
 nose.position.y = 1.5;
