@@ -28,7 +28,7 @@ scene.add(body);
 // Nose Cone
 const noseGeometry = new THREE.ConeGeometry(1, 1, 5);
 const noseMaterial = new THREE.MeshBasicMaterial({
-    color: 0x000080
+    color: 0x7f00ff
 });
 const nose = new THREE.Mesh(noseGeometry, noseMaterial);
 nose.position.y = 1.5;
@@ -46,7 +46,7 @@ flame.position.y = -1.5;
 // Window (Bonus)
 const windowGeometry = new THREE.CircleGeometry(0.3, 32);
 const windowMaterial = new THREE.MeshBasicMaterial({
-    color: 0x808080
+    color: 0x000080
 });
 const rocketWindow = new THREE.Mesh(
     windowGeometry,
@@ -56,12 +56,20 @@ rocketWindow.position.set(0, 0.0, 1);
 scene.add(rocketWindow);
 
 // Left Fin (Bonus)
-
-
+const leftFinGeometry = new THREE.BoxGeometry(0.1,0.6,2);
+const leftFinMaterial = new THREE.MeshBasicMaterial({ color: 0x555050});
+const leftFin = new THREE.Mesh(leftFinGeometry, leftFinMaterial);
+scene.add(leftFin);
+leftFin.position.y = -1;
+leftFin.position.x = -1;
 
 // Right Fin (Bonus)
-
-
+const rightFinGeometry = new THREE.BoxGeometry(0.1,0.6,2);
+const rightFinMaterial = new THREE.MeshBasicMaterial({ color: 0x555050});
+const rightFin = new THREE.Mesh(rightFinGeometry, rightFinMaterial);
+scene.add(rightFin);
+rightFin.position.y = -1;
+rightFin.position.x = 1;
 // Stars (Bonus)
 
 
