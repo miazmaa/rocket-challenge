@@ -70,7 +70,13 @@ const rightFin = new THREE.Mesh(rightFinGeometry, rightFinMaterial);
 scene.add(rightFin);
 rightFin.position.y = -1;
 rightFin.position.x = 1;
-// Stars (Bonus)
+// Ring
+const ringGeometry = new THREE.TorusGeometry(1.2, 0.05, 16, 100);
+const ringMaterial = new THREE.MeshBasicMaterial({ color: 0xa52a2a });
+const ring = new THREE.Mesh(ringGeometry, ringMaterial);
+scene.add(ring);
+ring.position.y = -0.5;
+ring.rotation.x = Math.PI / 2;
 
 
 // Camera Position
