@@ -44,8 +44,16 @@ flame.rotation.z = Math.PI;
 flame.position.y = -1.5;
 
 // Window (Bonus)
-
-
+const windowGeometry = new THREE.CircleGeometry(0.3, 32);
+const windowMaterial = new THREE.MeshBasicMaterial({
+    color: 0x808080
+});
+const rocketWindow = new THREE.Mesh(
+    windowGeometry,
+    windowMaterial
+);
+rocketWindow.position.set(0, 0.0, 1);
+scene.add(rocketWindow);
 
 // Left Fin (Bonus)
 
