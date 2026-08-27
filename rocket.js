@@ -20,7 +20,6 @@ const bodyGeometry = new THREE.CylinderGeometry(1, 1, 2, 10);
 const bodyMaterial = new THREE.MeshBasicMaterial({
     color: 0x00ffff
 });
-
 const body = new THREE.Mesh(bodyGeometry, bodyMaterial);
 scene.add(body);
 
@@ -37,7 +36,12 @@ scene.add(nose);
 
 
 // Flame
-
+const flameGeometry = new THREE.ConeGeometry(0.8,1,8,16);
+const flameMaterial = new THREE.MeshBasicMaterial({ color: 0xff8800});
+const flame = new THREE.Mesh(flameGeometry, flameMaterial);
+scene.add(flame);
+flame.rotation.z = Math.PI;
+flame.position.y = -1.5;
 
 // Window (Bonus)
 
