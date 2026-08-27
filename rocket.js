@@ -21,7 +21,13 @@ document.body.appendChild(renderer.domElement);
 
 
 // Nose Cone
-
+const noseGeometry = new THREE.ConeGeometry(1, 1, 5);
+const noseMaterial = new THREE.MeshBasicMaterial({
+    color: 800080
+});
+const nose = new THREE.Mesh(noseGeometry, noseMaterial);
+nose.position.y = 1.5;
+scene.add(nose);
 
 
 // Flame
